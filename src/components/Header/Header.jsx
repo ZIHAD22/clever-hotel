@@ -16,6 +16,12 @@ const Header = () => {
           <CustomLink className="navbar" to="/hotels">
             Hotels
           </CustomLink>
+          <CustomLink className="navbar" to="/login">
+            Login
+          </CustomLink>
+          <CustomLink className="navbar" to="/signup">
+            Sign Up
+          </CustomLink>
         </Nav>
       </Container>
     </Navbar>

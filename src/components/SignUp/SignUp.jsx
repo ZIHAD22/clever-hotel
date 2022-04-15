@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import useInputValues from "../../hooks/useInputValues";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../fireBase.init";
 import Error from "../Error/Error";
-import { async } from "@firebase/util";
 
 const SignUp = () => {
   // handle Error
@@ -21,20 +20,24 @@ const SignUp = () => {
   // handle submit from
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (agree) {
-      if (password === confirmPassword) {
-        createUserWithEmailAndPassword(email, password);
-        if (error.message) {
-          setError(error.message);
+    if (email && password && confirmPassword && agree) {
+      if (agree) {
+        if (password === confirmPassword) {
+          createUserWithEmailAndPassword(email, password);
+          if (error?.message) {
+            setError(error.message);
+            setShow(true);
+          }
+        } else {
+          setError("Your Password and Confirm password is not match");
           setShow(true);
         }
       } else {
-        setError("Your Password and Confirm password is not match");
+        setError("please Agree to Our trams and condition");
         setShow(true);
       }
     } else {
-      setError("please Agree to Our trams and condition");
-      setShow(true);
+      setError("Please Provide Every Info That we want");
     }
   };
 

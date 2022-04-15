@@ -1,8 +1,6 @@
-import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
 
 const Error = ({ show, message, fireBaseError, handleErrorClose }) => {
-  // onClose={() => setShow(false)}
   if (show) {
     return (
       <Alert

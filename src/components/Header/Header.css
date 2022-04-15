@@ -1,0 +1,9 @@
+.navbar{
+    text-decoration: none;
+    padding-left: 10px;
+    color: white;
+}
+
+.navbar:hover{
+    color: orange;
+}

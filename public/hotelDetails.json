@@ -1,0 +1,32 @@
+[
+    {
+        "id" : "1",
+        "name" :"Crowne Plaza",
+        "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nostrum consequatur accusantium fugiat iste accusamus, veritatis unde. Repudiandae, provident alias? Cum, ad rerum",
+        "img" : "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?t=st=1650035287~exp=1650035887~hmac=dece7206fb7237310eee08510951d7c298891dd5555f71f3022abc75fef4932c&w=900"
+    },
+    {
+        "id" : "2",
+        "name" :"Crowne Plaza",
+        "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nostrum consequatur accusantium fugiat iste accusamus, veritatis unde. Repudiandae, provident alias? Cum, ad rerum",
+        "img" : "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?t=st=1650035287~exp=1650035887~hmac=dece7206fb7237310eee08510951d7c298891dd5555f71f3022abc75fef4932c&w=900"
+    },
+    {
+        "id" : "3",
+        "name" :"Crowne Plaza",
+        "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nostrum consequatur accusantium fugiat iste accusamus, veritatis unde. Repudiandae, provident alias? Cum, ad rerum",
+        "img" : "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?t=st=1650035287~exp=1650035887~hmac=dece7206fb7237310eee08510951d7c298891dd5555f71f3022abc75fef4932c&w=900"
+    },
+    {
+        "id" : "4",
+        "name" :"Crowne Plaza",
+        "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nostrum consequatur accusantium fugiat iste accusamus, veritatis unde. Repudiandae, provident alias? Cum, ad rerum",
+        "img" : "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?t=st=1650035287~exp=1650035887~hmac=dece7206fb7237310eee08510951d7c298891dd5555f71f3022abc75fef4932c&w=900"
+    },
+    {
+        "id" : "5",
+        "name" :"Crowne Plaza",
+        "desc" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nostrum consequatur accusantium fugiat iste accusamus, veritatis unde. Repudiandae, provident alias? Cum, ad rerum",
+        "img" : "https://img.freepik.com/free-photo/elegant-hotel-room-with-big-bed_1203-1494.jpg?t=st=1650035287~exp=1650035887~hmac=dece7206fb7237310eee08510951d7c298891dd5555f71f3022abc75fef4932c&w=900"
+    }
+]

@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import useInputValues from "../../hooks/useInputValues";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
 import auth from "../../fireBase.init";
 import Error from "../Error/Error";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  // All input value
+  const [userName, email, password, confirmPassword, agree, handleChangeBlur] =
+    useInputValues();
+
+  // upDate profile
+  const [updateProfile] = useUpdateProfile(auth);
   // handle Error
   const [handleError, setError] = useState("");
   const [show, setShow] = useState(false);
-
-  // All input value
-  const [email, password, confirmPassword, agree, handleChangeBlur] =
-    useInputValues();
+  //   navigator
+  const navigator = useNavigate();
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
@@ -23,10 +31,19 @@ const SignUp = () => {
     if (email && password && confirmPassword && agree) {
       if (agree) {
         if (password === confirmPassword) {
-          createUserWithEmailAndPassword(email, password);
+          createUserWithEmailAndPassword(email, password).then(() => {
+            updateProfile({
+              displayName: userName,
+            });
+          });
+
           if (error?.message) {
             setError(error.message);
             setShow(true);
+          } else {
+            setError("Your Account Create Successful");
+            setShow(true);
+            navigator("/home");
           }
         } else {
           setError("Your Password and Confirm password is not match");
@@ -62,7 +79,7 @@ const SignUp = () => {
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
-                name="name"
+                name="userName"
                 onBlur={handleChangeBlur}
                 placeholder="Enter Name"
               />

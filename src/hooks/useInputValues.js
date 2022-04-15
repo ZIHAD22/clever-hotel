@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 const useInputValues = () => {
   const [state, setState] = useState({
+    userName: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -16,6 +17,7 @@ const useInputValues = () => {
   }
 
   return [
+    state.userName,
     state.email,
     state.password,
     state.confirmPassword,
